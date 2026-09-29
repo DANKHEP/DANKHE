@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html><head><title>Cadastro Mineiro - Dados do Processo</title></head>
+<body>
+<form method="post" action="./dadosProcesso.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="abc" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="def" />
+<span>Número do Processo:</span>
+<input name="ctl00$conteudo$txtNumeroProcesso" type="text" id="ctl00_conteudo_txtNumeroProcesso" />
+<input type="submit" name="ctl00$conteudo$btnConsultarProcesso" value="Consultar" id="ctl00_conteudo_btnConsultarProcesso" />
+<table>
+ <tr><td>Número do Processo:</td><td><span id="ctl00_conteudo_lblNumeroProcesso">{PROCESSO}</span></td></tr>
+ <tr><td>Área(ha):</td><td><span id="ctl00_conteudo_lblArea">{AREA}</span></td></tr>
+ <tr><td>Tipo Requerimento:</td><td><span id="ctl00_conteudo_lblTipoRequerimento">{USO}</span></td></tr>
+ <tr><td>Fase Atual:</td><td><span id="ctl00_conteudo_lblNomeFase">{FASE}</span></td></tr>
+ <tr><td>Ativo:</td><td><span id="ctl00_conteudo_lblAtivo">Sim</span></td></tr>
+</table>
+<table id="ctl00_conteudo_gridPessoas">
+ <tr><th>Tipo de Relação</th><th>CPF/CNPJ</th><th>Nome</th><th>Data Inicial</th><th>Data Final</th></tr>
+ <tr><td>Titular/Requerente</td><td>{DOC}</td><td>{TITULAR}</td><td>10/02/2010</td><td></td></tr>
+</table>
+<table id="ctl00_conteudo_gridSubstancias">
+ <tr><th>Nome</th><th>Tipo de Uso</th><th>Data Inicial</th><th>Data Final</th><th>Motivo Encerramento</th></tr>
+ <tr><td>{SUBS}</td><td>{USO_SUBS}</td><td>10/02/2010</td><td></td><td></td></tr>
+</table>
+<table id="ctl00_conteudo_gridMunicipios">
+ <tr><th>Município</th></tr>
+ <tr><td>{MUNICIPIO}</td></tr>
+</table>
+<table id="ctl00_conteudo_gridDocumentos">
+ <tr><th>Título</th><th>Número</th><th>Data de Publicação</th><th>Data de Vencimento</th></tr>
+ {TITULOS}
+</table>
+<table id="ctl00_conteudo_gridEventos">
+ <tr><th>Evento</th><th>Data</th><th>Publicação D.O.U</th></tr>
+ {EVENTOS}
+</table>
+</form>
+</body></html>

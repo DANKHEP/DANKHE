@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html><body>
+<form method="post" action="./pesquisarProcessos.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" value="xyz" />
+<input type="radio" name="ctl00$conteudo$rblTipo" value="Nome" checked="checked" /> Nome
+<input type="radio" name="ctl00$conteudo$rblTipo" value="CPFCNPJ" /> CPF/CNPJ
+<label for="ctl00_conteudo_txtCPFCNPJ">CPF/CNPJ</label>
+<input name="ctl00$conteudo$txtCPFCNPJ" type="text" id="ctl00_conteudo_txtCPFCNPJ" />
+<input type="submit" name="ctl00$conteudo$btnPesquisar" value="Pesquisar" />
+<table id="ctl00_conteudo_gridProcessos">
+ <tr><th>Processo</th><th>Titular</th><th>Fase</th><th>Substância</th></tr>
+ {LINHAS}
+</table>
+</form></body></html>
